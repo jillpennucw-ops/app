@@ -198,7 +198,7 @@ const CalculatorPage = () => {
                           </span>
                         </div>
 
-                    {result.colaAdjustedSalary && (
+                    {result.cola_adjusted_salary && (
                       <>
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-600">COLA Adjusted Salary</span>
