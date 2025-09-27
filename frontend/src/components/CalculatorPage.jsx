@@ -157,7 +157,7 @@ const CalculatorPage = () => {
                     <div className="text-center p-4 bg-blue-50 rounded-lg">
                       <p className="text-sm text-gray-600">Original Salary</p>
                       <p className="text-xl font-bold text-blue-600">
-                        {formatCurrency(result.originalSalary)}
+                        {formatCurrency(result.original_salary)}
                       </p>
                       <p className="text-xs text-gray-500">
                         {formatDate(result.startDate)}
