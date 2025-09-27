@@ -9,6 +9,9 @@ import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import axios from "axios";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
+
 const CalculatorPage = () => {
   const [startDate, setStartDate] = useState("");
   const [salary, setSalary] = useState("");
