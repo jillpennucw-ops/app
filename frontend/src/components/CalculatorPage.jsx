@@ -203,7 +203,7 @@ const CalculatorPage = () => {
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-600">COLA Adjusted Salary</span>
                           <span className="font-medium">
-                            {formatCurrency(result.colaAdjustedSalary)}
+                            {formatCurrency(result.cola_adjusted_salary)}
                           </span>
                         </div>
 
