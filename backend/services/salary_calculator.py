@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Dict, Any
 from .inflation_service import InflationService
-from ..models.inflation_models import InflationRequest, InflationResponse
+from models.inflation_models import InflationRequest, InflationResponse
 
 class SalaryCalculator:
     def __init__(self):
