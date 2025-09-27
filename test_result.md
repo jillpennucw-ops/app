@@ -123,15 +123,21 @@ backend:
 frontend:
   - task: "Salary Inflation Calculator Frontend Implementation"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/CalculatorPage.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "testing"
           comment: "Frontend implementation found. Need to test comprehensive functionality including: input validation, calculation scenarios (pre-1991, 1991-2021 COLA period, post-2021), results display, error handling, loading states, currency formatting, responsive design, and edge cases."
+        - working: false
+          agent: "testing"
+          comment: "Critical bug found: Frontend was using camelCase field names (originalSalary, inflationAdjustedSalary) but API returns snake_case (original_salary, inflation_adjusted_salary). This caused $NaN display for all salary values. Fixed field name mapping in CalculatorPage.jsx."
+        - working: true
+          agent: "testing"
+          comment: "Comprehensive testing completed successfully after fixing field name mapping bug. All core functionality verified: Pre-1991 employment (simple inflation, no COLA), 1991-2021 COLA period (complex calculations with COLA adjustments and de facto paycut analysis), Post-2021 employment (simple inflation, no COLA), boundary dates (1991-01-01, 2021-12-31), currency formatting ($XX,XXX.XX), loading states, responsive design (mobile/tablet), and proper error handling. All calculation scenarios working correctly with accurate results display."
 
 metadata:
   created_by: "testing_agent"
