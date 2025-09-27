@@ -26,12 +26,27 @@ const CalculatorPage = () => {
 
     setLoading(true);
     
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    const calculation = mockCalculateInflation(startDate, parseFloat(salary));
-    setResult(calculation);
-    setLoading(false);
+    try {
+      const response = await axios.post(`${API}/calculate-inflation`, {
+        start_date: startDate,
+        original_salary: parseFloat(salary)
+      });
+      
+      setResult(response.data);
+    } catch (error) {
+      console.error('Error calculating inflation:', error);
+      let errorMessage = "An error occurred while calculating inflation. Please try again.";
+      
+      if (error.response?.data?.detail) {
+        errorMessage = error.response.data.detail;
+      } else if (error.response?.status === 400) {
+        errorMessage = "Please check your input values and try again.";
+      }
+      
+      alert(errorMessage);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const formatCurrency = (amount) => {
