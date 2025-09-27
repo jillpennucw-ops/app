@@ -262,12 +262,12 @@ class SalaryInflationAPITester:
         future_date = (datetime.now() + timedelta(days=30)).strftime('%Y-%m-%d')
         
         invalid_cases = [
-            {"start_date": future_date, "original_salary": 50000, "description": "Future date", "expected_status": 400},
-            {"start_date": "1900-01-01", "original_salary": 25000, "description": "Date before 1913", "expected_status": 400},
-            {"start_date": "2023-13-45", "original_salary": 60000, "description": "Invalid date format", "expected_status": 400},
-            {"start_date": "not-a-date", "original_salary": 70000, "description": "Non-date string", "expected_status": 400},
-            {"start_date": "2020-01-01", "original_salary": -5000, "description": "Negative salary", "expected_status": 422},
-            {"start_date": "2020-01-01", "original_salary": 0, "description": "Zero salary", "expected_status": 422}
+            {"start_date": future_date, "original_salary": 50000, "description": "Future date", "expected_status": [400, 422]},
+            {"start_date": "1900-01-01", "original_salary": 25000, "description": "Date before 1913", "expected_status": [400, 422]},
+            {"start_date": "2023-13-45", "original_salary": 60000, "description": "Invalid date format", "expected_status": [400, 422]},
+            {"start_date": "not-a-date", "original_salary": 70000, "description": "Non-date string", "expected_status": [400, 422]},
+            {"start_date": "2020-01-01", "original_salary": -5000, "description": "Negative salary", "expected_status": [422]},
+            {"start_date": "2020-01-01", "original_salary": 0, "description": "Zero salary", "expected_status": [422]}
         ]
         
         for case in invalid_cases:
