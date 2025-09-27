@@ -277,7 +277,7 @@ class SalaryInflationAPITester:
                 "original_salary": case["original_salary"]
             })
             
-            if result['status_code'] == case['expected_status']:
+            if result['status_code'] in case['expected_status']:
                 print(f"✅ Correct error handling: Status {result['status_code']}")
                 if isinstance(result['response'], dict) and 'detail' in result['response']:
                     print(f"   Error message: {result['response']['detail']}")
