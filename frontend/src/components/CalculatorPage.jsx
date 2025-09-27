@@ -160,7 +160,7 @@ const CalculatorPage = () => {
                         {formatCurrency(result.original_salary)}
                       </p>
                       <p className="text-xs text-gray-500">
-                        {formatDate(result.startDate)}
+                        {formatDate(result.start_date)}
                       </p>
                     </div>
                     <div className="text-center p-4 bg-green-50 rounded-lg">
