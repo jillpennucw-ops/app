@@ -177,10 +177,24 @@ const CalculatorPage = () => {
                   <Separator />
 
                   <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-700">Time Period</span>
+                      <Badge variant="secondary">
+                        {result.category}
+                      </Badge>
+                    </div>
+
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-600">Total Inflation Rate</span>
                           <span className="font-medium">
                             {(result.inflation_rate * 100).toFixed(1)}%
+                          </span>
+                        </div>
+
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-gray-600">Years Elapsed</span>
+                          <span className="font-medium">
+                            {result.years_elapsed} years
                           </span>
                         </div>
 
