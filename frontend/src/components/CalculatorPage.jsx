@@ -166,7 +166,7 @@ const CalculatorPage = () => {
                     <div className="text-center p-4 bg-green-50 rounded-lg">
                       <p className="text-sm text-gray-600">Today's Value</p>
                       <p className="text-xl font-bold text-green-600">
-                        {formatCurrency(result.inflationAdjustedSalary)}
+                        {formatCurrency(result.inflation_adjusted_salary)}
                       </p>
                       <p className="text-xs text-gray-500">
                         Inflation Adjusted
