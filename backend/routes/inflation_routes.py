@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from ..models.inflation_models import InflationRequest, InflationResponse
-from ..services.salary_calculator import SalaryCalculator
+from models.inflation_models import InflationRequest, InflationResponse
+from services.salary_calculator import SalaryCalculator
 import logging
 
 logger = logging.getLogger(__name__)
