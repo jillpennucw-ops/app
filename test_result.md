@@ -149,3 +149,5 @@ test_plan:
 agent_communication:
     - agent: "testing"
       message: "Backend API testing completed successfully. Fixed import errors and verified all functionality. The /api/calculate-inflation endpoint is working correctly with proper date categorization, COLA calculations, error handling, and response formatting. All test scenarios passed including edge cases and invalid input handling."
+    - agent: "testing"
+      message: "Starting comprehensive frontend testing for salary inflation calculator. Will test input validation, all calculation scenarios (pre-1991, 1991-2021 COLA, post-2021), results display, error handling, loading states, currency formatting, and edge cases as specified in review request."
