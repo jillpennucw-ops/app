@@ -141,7 +141,7 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Salary Inflation Calculator API Implementation"
+    - "Salary Inflation Calculator Frontend Implementation"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
