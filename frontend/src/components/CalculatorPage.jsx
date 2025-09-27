@@ -210,7 +210,7 @@ const CalculatorPage = () => {
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-600">De facto Pay Cut</span>
                           <span className="font-medium text-red-600">
-                            -{formatCurrency(Math.abs(result.defactoPaycut))}
+                            -{formatCurrency(Math.abs(result.defacto_paycut))}
                           </span>
                         </div>
 
