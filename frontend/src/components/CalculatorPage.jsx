@@ -218,7 +218,7 @@ const CalculatorPage = () => {
                           <AlertCircle className="h-4 w-4" />
                           <AlertDescription>
                             <strong>Analysis:</strong> Your salary has effectively been reduced by{" "}
-                            <strong>{formatCurrency(Math.abs(result.defactoPaycut))}</strong>{" "}
+                            <strong>{formatCurrency(Math.abs(result.defacto_paycut))}</strong>{" "}
                             when accounting for COLA adjustments vs. true inflation.
                           </AlertDescription>
                         </Alert>
